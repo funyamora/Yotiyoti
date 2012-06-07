@@ -22,10 +22,6 @@ package jp.co.piisu.yotiyoti.util
 			var rx:Number = screenResolutionX / width;
 			var ry:Number = screenResolutionY / height;
 			
-			trace("o " + Capabilities.screenResolutionX + "," + Capabilities.screenResolutionY);
-			trace("a " + screenResolutionX + "," + screenResolutionY);
-			trace("r " + rx + "," + ry);
-			
 			var x:Number;
 			var y:Number;
 			var w:Number;
@@ -47,11 +43,17 @@ package jp.co.piisu.yotiyoti.util
 		
 		public static function get screenResolutionX():Number {
 			if(isEmulator) return EMULATOR_DEVICE_HEIGHT;
+			
+			// 取得するタイミングによって、縦横の値が逆になっているので、とりあえず適当な対処
+			if(Capabilities.screenResolutionX > Capabilities.screenResolutionY) return Capabilities.screenResolutionX;
 			return Capabilities.screenResolutionY;
 		}
 		
 		public static function get screenResolutionY():Number {
 			if(isEmulator) return EMULATOR_DEVICE_WIDTH;
+			
+			// 取得するタイミングによって、縦横の値が逆になっているので、とりあえず適当な対処
+			if(Capabilities.screenResolutionX > Capabilities.screenResolutionY) return Capabilities.screenResolutionY;
 			return Capabilities.screenResolutionX;
 		}
 		

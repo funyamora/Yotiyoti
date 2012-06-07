@@ -63,7 +63,6 @@ package jp.co.piisu.yotiyoti.core
 				_sigNativeComplete = new NativeSignal(_channel, Event.SOUND_COMPLETE, Event);
 				_sigNativeComplete.addOnce(onComplete);
 			}
-			trace("after play:" + getTimer());
 		}
 		
 		public function fade(volume:Number, time:Number) :void {
@@ -85,16 +84,13 @@ package jp.co.piisu.yotiyoti.core
 		
 		private function onFade(e:TimerEvent):void {
 			volume +=_stepVolume;
-			trace("onFade:" + volume + " to:" + _toVolume + " step:" + _stepVolume + " @" + Timer(e.target).currentCount);
 			
 			if(volume >= _toVolume && _stepVolume > 0) {
-				trace("in" + volume + "," + _toVolume);
 				volume = _toVolume;
 				disposeTimer();
 				_sigCompleteFadeIn.dispatch(new GenericEvent());
 				
 			} else if(volume <= _toVolume && _stepVolume < 0){
-				trace("out " + volume + "," + _toVolume);
 				volume = _toVolume;
 				disposeTimer();
 				_sigCompleteFadeOut.dispatch(new GenericEvent());
@@ -112,7 +108,6 @@ package jp.co.piisu.yotiyoti.core
 		}
 		
 		public function stop():void {
-			trace("stop@" + this.name);
 			if(_channel != null) {
 				recLastPosition();
 				_channel.stop();
@@ -143,7 +138,6 @@ package jp.co.piisu.yotiyoti.core
 			else if(value <= 0) value = 0;
 			
 			_volume = value;
-			trace("set volume:" + value + " @" + this.name);
 			
 			if(_channel != null) {
 				_transform.volume = _volume;

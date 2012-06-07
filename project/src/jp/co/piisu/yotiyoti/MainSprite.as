@@ -30,9 +30,6 @@ package jp.co.piisu.yotiyoti
 		}
 		
 		protected override function init():void {
-			
-			trace(stage.stageWidth + "," + stage.stageHeight);
-			
 			var fit_rect:Rectangle = ScreenUtil.getScreenFitRectWithFixedAspectRatio(GameConst.WIDTH, GameConst.HEIGHT);
 			x = fit_rect.x;
 			y = fit_rect.y;
@@ -42,7 +39,6 @@ package jp.co.piisu.yotiyoti
 			Starling.current.viewPort = new Rectangle( 0, 0, ScreenUtil.screenResolutionX, ScreenUtil.screenResolutionY );
 			stage.stageWidth = ScreenUtil.screenResolutionX;
 			stage.stageHeight = ScreenUtil.screenResolutionY;
-			
 			
 			FontManager.init();
 			Director.instance.run( new TitleScene() );

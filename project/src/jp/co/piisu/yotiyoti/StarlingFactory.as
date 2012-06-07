@@ -2,12 +2,12 @@ package jp.co.piisu.yotiyoti
 {
 	import flash.display.Stage;
 	import flash.errors.IllegalOperationError;
+	import flash.events.Event;
 	import flash.geom.Rectangle;
 	
 	import jp.co.piisu.yotiyoti.util.ScreenUtil;
 	
 	import starling.core.Starling;
-	import starling.events.Event;
 
 	public class StarlingFactory
 	{

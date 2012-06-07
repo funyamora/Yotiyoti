@@ -2,18 +2,20 @@ package jp.co.piisu.yotiyoti.scene.other
 {
 	import flash.display.Bitmap;
 	import flash.geom.Point;
+	import flash.system.Capabilities;
 	
 	import jp.co.piisu.yotiyoti.Config;
 	import jp.co.piisu.yotiyoti.EmbedSounds;
 	import jp.co.piisu.yotiyoti.FontManager;
-	import jp.co.piisu.yotiyoti.core.XSound;
-	import jp.co.piisu.yotiyoti.core.XSoundManager;
 	import jp.co.piisu.yotiyoti.core.Actor;
 	import jp.co.piisu.yotiyoti.core.Director;
 	import jp.co.piisu.yotiyoti.core.Scene;
+	import jp.co.piisu.yotiyoti.core.XSound;
+	import jp.co.piisu.yotiyoti.core.XSoundManager;
 	import jp.co.piisu.yotiyoti.scene.game.GameScene;
 	
 	import starling.animation.DelayedCall;
+	import starling.core.Starling;
 	import starling.display.DisplayObject;
 	import starling.display.Image;
 	import starling.events.Touch;

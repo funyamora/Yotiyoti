@@ -15,7 +15,6 @@ package
 	import jp.co.piisu.yotiyoti.util.ScreenUtil;
 	
 	import starling.core.Starling;
-	import starling.events.ResizeEvent;
 	
 	public class Yotiyoti extends Sprite
 	{
@@ -37,6 +36,7 @@ package
 			
 			app = NativeApplication.nativeApplication;
 			app.addEventListener(Event.DEACTIVATE, onDeactive);
+			
 		}
 		
 		private function onDeactive(event:Event):void

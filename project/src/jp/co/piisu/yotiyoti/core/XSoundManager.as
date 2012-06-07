@@ -81,7 +81,6 @@ package jp.co.piisu.yotiyoti.core
 					_oldBgm.fade(0, fade_time);
 					_oldBgm.sigCompleteFadeOut.addOnce(function(e:GenericEvent):void {
 						if(_oldBgm != null) {
-							trace("complete fade out & dispose _oldBgm:" + _oldBgm.name);
 							_oldBgm.stop();
 							_oldBgm = null;
 						}
@@ -127,7 +126,6 @@ package jp.co.piisu.yotiyoti.core
 			}
 			
 			if(_currentBgm != null) {
-				trace("resumeBgm:" + fade_time + "," + _isPausing + "," + _isResuming);
 				if(fade_time > 0 && !_isPausing && !_isResuming) {
 					_isResuming = true;
 					_currentBgm.volume = 0;
