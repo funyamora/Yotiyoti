@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="spritesheet.png">
+	<SubTexture name="funya_walk001" x="0" y="0" width="32" height="32"/>
+	<SubTexture name="funya_walk002" x="32" y="0" width="32" height="32"/>
+	<SubTexture name="funya_walk003" x="64" y="0" width="32" height="32"/>
+	<SubTexture name="funya_walk004" x="96" y="0" width="32" height="32"/>
+	<SubTexture name="funya_yarare001" x="128" y="0" width="32" height="32"/>
+	<SubTexture name="funya_yarare001" x="128" y="0" width="32" height="32"/>
+	<SubTexture name="funya_yarare002" x="160" y="0" width="32" height="32"/>
+	<SubTexture name="funya_yarare003" x="192" y="0" width="32" height="32"/>
+	<SubTexture name="funya_yarare004" x="224" y="0" width="32" height="32"/>
+	<SubTexture name="funya_banzai001" x="256" y="0" width="32" height="32"/>
+	<SubTexture name="funya_banzai002" x="288" y="0" width="32" height="32"/>
+	
+	<SubTexture name="katsume_walk001" x="0" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_walk002" x="32" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_walk003" x="64" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_walk004" x="96" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_yarare001" x="128" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_yarare001" x="128" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_yarare002" x="160" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_yarare003" x="192" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_yarare004" x="224" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_banzai001" x="256" y="32" width="32" height="32"/>
+	<SubTexture name="katsume_banzai002" x="288" y="32" width="32" height="32"/>
+	
+	<SubTexture name="okazaki_walk001" x="0" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_walk002" x="32" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_walk003" x="64" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_walk004" x="96" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_yarare001" x="128" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_yarare001" x="128" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_yarare002" x="160" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_yarare003" x="192" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_yarare004" x="224" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_banzai001" x="256" y="64" width="32" height="32"/>
+	<SubTexture name="okazaki_banzai002" x="288" y="64" width="32" height="32"/>
+	
+	<SubTexture name="taxi" x="0" y="96" width="32" height="32"/>
+	
+	<SubTexture name="item1" x="320" y="0" width="16" height="16"/>
+	<SubTexture name="item2" x="336" y="0" width="16" height="16"/>
+	<SubTexture name="item3" x="352" y="0" width="16" height="16"/>
+	<SubTexture name="1up" x="336" y="16" width="16" height="16"/>
+	
+	<SubTexture name="enemy_haniwa1" x="384" y="0" width="32" height="32"/>
+	<SubTexture name="enemy_haniwa2" x="416" y="0" width="32" height="32"/>
+	<SubTexture name="enemy_haniwa3" x="448" y="0" width="32" height="32"/>
+	<SubTexture name="enemy_haniwa4" x="480" y="0" width="32" height="32"/>
+	
+	<SubTexture name="enemy_hopping1" x="512" y="0" width="32" height="32"/>
+	<SubTexture name="enemy_hopping2" x="544" y="0" width="32" height="32"/>
+	
+	<SubTexture name="enemy_obake1" x="384" y="32" width="32" height="32"/>
+	<SubTexture name="enemy_obake2" x="416" y="32" width="32" height="32"/>
+	
+	<SubTexture name="enemy_or2_1" x="448" y="32" width="32" height="32"/>
+	<SubTexture name="enemy_or2_2" x="480" y="32" width="32" height="32"/>
+	
+	<SubTexture name="enemy_yotiyoti1" x="384" y="64" width="32" height="32"/>
+	<SubTexture name="enemy_yotiyoti2" x="416" y="64" width="32" height="32"/>
+	
+</TextureAtlas>
