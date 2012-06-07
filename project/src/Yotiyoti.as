@@ -7,12 +7,15 @@ package
 	import flash.events.Event;
 	import flash.geom.Rectangle;
 	
+	import jp.co.piisu.yotiyoti.GameConst;
+	import jp.co.piisu.yotiyoti.MainSprite;
+	import jp.co.piisu.yotiyoti.StarlingFactory;
 	import jp.co.piisu.yotiyoti.core.Director;
+	import jp.co.piisu.yotiyoti.core.XSoundManager;
+	import jp.co.piisu.yotiyoti.util.ScreenUtil;
 	
 	import starling.core.Starling;
 	import starling.events.ResizeEvent;
-	import jp.co.piisu.yotiyoti.MainSprite;
-	import jp.co.piisu.yotiyoti.core.XSoundManager;
 	
 	public class Yotiyoti extends Sprite
 	{
@@ -29,12 +32,8 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
-			Starling.multitouchEnabled = true;
-			Starling.handleLostContext = true;
-			curStarling = new Starling(MainSprite, stage);
-			Starling.current.showStats = true;
-			curStarling.antiAliasing = 0;
-			curStarling.start();
+			var st:Starling = StarlingFactory.create(MainSprite, stage);
+			st.start();
 			
 			app = NativeApplication.nativeApplication;
 			app.addEventListener(Event.DEACTIVATE, onDeactive);

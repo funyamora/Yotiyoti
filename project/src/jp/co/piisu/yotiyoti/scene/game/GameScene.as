@@ -1,16 +1,17 @@
 package jp.co.piisu.yotiyoti.scene.game
 {
 	import flash.geom.Point;
+	import flash.system.System;
 	
 	import flashx.textLayout.formats.Direction;
 	
 	import jp.co.piisu.yotiyoti.EmbedSounds;
 	import jp.co.piisu.yotiyoti.FontManager;
 	import jp.co.piisu.yotiyoti.GameConst;
-	import jp.co.piisu.yotiyoti.core.XSound;
-	import jp.co.piisu.yotiyoti.core.XSoundManager;
 	import jp.co.piisu.yotiyoti.core.Director;
 	import jp.co.piisu.yotiyoti.core.Scene;
+	import jp.co.piisu.yotiyoti.core.XSound;
+	import jp.co.piisu.yotiyoti.core.XSoundManager;
 	import jp.co.piisu.yotiyoti.scene.game.enemy.Enemy;
 	import jp.co.piisu.yotiyoti.scene.game.enemy.EnemyHelper;
 	import jp.co.piisu.yotiyoti.scene.game.enemy.EnemyType;
@@ -165,6 +166,7 @@ package jp.co.piisu.yotiyoti.scene.game
 			if(spBtn != null) spBtn.refreshAbleView();
 			
 			updateFunc = updateBeforeStage;
+			System.gc();
 			sleep(1);
 		}
 		

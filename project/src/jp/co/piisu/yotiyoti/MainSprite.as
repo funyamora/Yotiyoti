@@ -10,6 +10,7 @@ package jp.co.piisu.yotiyoti
 	import jp.co.piisu.yotiyoti.scene.other.EndingScene;
 	import jp.co.piisu.yotiyoti.scene.other.SelectCharaScene;
 	import jp.co.piisu.yotiyoti.scene.other.TitleScene;
+	import jp.co.piisu.yotiyoti.util.ScreenUtil;
 	
 	import starling.animation.Transitions;
 	import starling.animation.Tween;
@@ -29,19 +30,19 @@ package jp.co.piisu.yotiyoti
 		}
 		
 		protected override function init():void {
-			trace(stage.stageWidth + "," + stage.stageHeight);
-			trace(Capabilities.screenResolutionX + "," + Capabilities.screenResolutionY);
 			
-			Starling.current.viewPort = new Rectangle(0, 0, Capabilities.screenResolutionY, Capabilities.screenResolutionX);
 			trace(stage.stageWidth + "," + stage.stageHeight);
 			
-			scaleY = stage.stageHeight / 192;
+			var fit_rect:Rectangle = ScreenUtil.getScreenFitRectWithFixedAspectRatio(GameConst.WIDTH, GameConst.HEIGHT);
+			x = fit_rect.x;
+			y = fit_rect.y;
+			scaleY = fit_rect.height / GameConst.HEIGHT;
 			scaleX = scaleY;
 			
-			var quad:Quad = new Quad(256, 192, 0xFFFFFF);
-			addChild(quad);
+			Starling.current.viewPort = new Rectangle( 0, 0, ScreenUtil.screenResolutionX, ScreenUtil.screenResolutionY );
+			stage.stageWidth = ScreenUtil.screenResolutionX;
+			stage.stageHeight = ScreenUtil.screenResolutionY;
 			
-			this.x = int( (stage.stageWidth - this.width) / 2 );
 			
 			FontManager.init();
 			Director.instance.run( new TitleScene() );
